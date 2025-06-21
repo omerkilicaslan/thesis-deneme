@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Thesis Report: Motivation, Personality & L2 Achievement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="text-3xl font-bold text-center mt-10 text-[#044343]">Thesis Visual Preview</h1>
+    <p class="text-center text-gray-600 mt-4">Bu sadece test amaçlı kısa bir önizlemedir.</p>
+    <div class="chart-container mx-auto my-10 w-1/2">
+        <canvas id="testChart"></canvas>
+    </div>
+    <script>
+        const ctx = document.getElementById('testChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['A', 'B', 'C'],
+                datasets: [{
+                    label: 'Test Data',
+                    data: [12, 19, 3],
+                    backgroundColor: ['#044343', '#BF5A36', '#4A4A4A']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
